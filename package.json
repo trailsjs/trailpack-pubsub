@@ -1,0 +1,48 @@
+{
+  "name": "trailpack-pubsub",
+  "version": "0.1.0",
+  "description": "Redis Pub/Sub implementation for Trails.js apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trailsjs/trailpack-pubsub.git"
+  },
+  "keywords": [
+    "trails",
+    "trailpack",
+    "redis",
+    "pubsub"
+  ],
+  "author": {
+    "name": "Konstantin Zolotarev",
+    "email": "konstantin.zolotarev@gmail.com",
+    "url": "https://github.com/konstantinzolotarev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trailsjs/trailpack-pubsub/issues"
+  },
+  "homepage": "https://github.com/trailsjs/trailpack-pubsub#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "eslint-config-trails": "^1.0.7",
+    "mocha": "^3.1.2",
+    "smokesignals": "^1.2.2",
+    "trailpack-core": "^1.0.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "dependencies": {
+    "redis": "^2.6.2",
+    "trailpack": "^1.0.5",
+    "trails-service": "^1.0.0-beta-2"
+  }
+}

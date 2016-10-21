@@ -1,0 +1,1 @@
+exports.PubSubService = require('./PubSubService')
