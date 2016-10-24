@@ -1,17 +1,23 @@
 'use strict'
 
 const Trailpack = require('trailpack')
+const _ = require('lodash')
 
 module.exports = class PubSubTrailpack extends Trailpack {
 
   /**
-   * TODO document method
+   * Validate config
    */
   validate () {
     if (!this.app.config.pubsub){
       return Promise.reject(
         new Error('There no pubsub.js under ./config,' +
           'check it\'s load in ./config/index.js or create it !')
+      )
+    }
+    if (!_.isString(this.app.config.pubsub.defaultChannel)) {
+      return Promise.reject(
+        new Error('Please provide `defaultChannel` for pubsub trailpack')
       )
     }
   }
@@ -27,7 +33,7 @@ module.exports = class PubSubTrailpack extends Trailpack {
    * TODO document method
    */
   initialize () {
-
+    super.initialize()
   }
 
   constructor(app) {
