@@ -12,6 +12,12 @@ module.exports = _.defaultsDeep({
     log: {
       logger: new smokesignals.Logger('error')
     },
+    pubsub: {
+      connection: {
+        host: '127.0.0.1',
+        port: 6379
+      }
+    },
     main: {
       packs: [
         require('trailpack-core'),

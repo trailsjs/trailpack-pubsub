@@ -13,11 +13,4 @@ describe('PubSub Trailpack', () => {
       assert(pack)
     })
   })
-
-  describe('#initialize', () => {
-
-    it('test', () => {
-      assert(true)
-    })
-  })
 })
