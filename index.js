@@ -36,6 +36,12 @@ module.exports = class PubSubTrailpack extends Trailpack {
     if (!this.app.config.pubsub.defaultChannel)
       this.app.config.pubsub.defaultChannel = 'trails-default'
 
+    if (!_.isObject(this.app.config.pubsub.handlers)) {
+      this.app.config.pubsub.handlers = {
+        onMessage: _.noop,
+        onError: _.noop
+      }
+    }
   }
 
   /**
