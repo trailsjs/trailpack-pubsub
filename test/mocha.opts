@@ -3,4 +3,5 @@
 --slow 50
 --check-leaks
 --globals app
+--globals app2
 --fgrep app.js --invert

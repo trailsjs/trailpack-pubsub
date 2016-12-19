@@ -3,10 +3,18 @@
 const TrailsApp = require('trails')
 
 before(() => {
-  global.app = new TrailsApp(require('./app'))
-  return global.app.start()
+  global.app = new TrailsApp(require('./app').appConfig)
+  global.app2 = new TrailsApp(require('./app').app2Config)
+
+  return Promise.all([
+    global.app.start(),
+    global.app2.start()
+  ])
 })
 
 after(() => {
-  return global.app.stop()
+  return Promise.all([
+    global.app.stop(),
+    global.app2.stop()
+  ])
 })
