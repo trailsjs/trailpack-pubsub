@@ -1,6 +1,6 @@
 {
   "name": "trailpack-pubsub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redis Pub/Sub implementation for Trails.js apps",
   "main": "index.js",
   "scripts": {
